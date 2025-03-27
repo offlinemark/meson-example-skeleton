@@ -2,4 +2,4 @@
 
 #include "CatchWrapper.hpp"
 
-TEST_CASE("hello") { CHECK(mylib_function() == 42); }
+TEST_CASE("mylib") { CHECK(mylib_function() == 42); }

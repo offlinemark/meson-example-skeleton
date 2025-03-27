@@ -19,12 +19,16 @@ MyLib = declare_dependency(
 MyLibTest = executable(
     'MyLibTest',
     sources: [
-        'test/tst_mylib.cpp'
+        'test/tst_mylib.cpp',
+        'test/tst_PrivateHelper.cpp'
     ],
     dependencies: [
         MyLib,
         XCatchWrapper,
     ],
+    include_directories: [
+        'src'  # Allow accessing private headers
+    ]
 )
 
 # Register this test with `meson test` - the test runner
